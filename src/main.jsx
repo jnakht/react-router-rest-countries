@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/countries',
+        loader: () => fetch('https://restcountries.com/v3.1/all') ,
         element: <Countries></Countries>,
       },
       {
